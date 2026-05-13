@@ -15,6 +15,9 @@ A simple single-page inventory management app built with Vue 3 and Pinia.
 # Install dependencies
 npm install
 
+# Install pinia
+npm install pinia
+
 # Run development server
 npm run dev
 ```
