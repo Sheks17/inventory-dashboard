@@ -57,16 +57,16 @@ src/
 ## Design Decisions
 
 **Why Pinia?**
-Pinia is the official state management library for Vue 3. I used it so all the product data, filters, and sorting logic live in one place rather than being scattered across components. Components stay thin — they just display data and call store actions.
+Pinia is the official state management library for Vue 3. I used it so all the product data, filters, and sorting logic live in one place rather than being scattered across components. Components stay thin so they can mainly just display data and call store actions.
 
 **Why keep components thin?**
 Each component only does one thing. ProductTable displays products. ProductForm handles adding. Filters handles filtering. This makes the code easier to read and maintain.
 
 **Why localStorage?**
-A real app would use a backend API. Since this is a frontend-only project, localStorage lets the data survive page refreshes so you don't lose products every time you reload.
+A real app would use a backend API. But this project is mostly frontend, so the localStorage lets the data survive page refreshes so you don't lose products every time you reload.
 
 **Why a computed getter for filtering?**
-The filteredProducts getter in the store automatically recalculates whenever the search query, category, in-stock toggle, or sort order changes. This means components never need to manually trigger updates — Vue's reactivity handles it.
+The filteredProducts getter in the store automatically recalculates whenever the search query, category, in-stock toggle, or sort order changes. This means components never need to manually make updates, Vue's reactivity handles it.
 
 **Validation**
-The form checks that name is not empty, price is greater than 0, and stock is 0 or more. Error messages appear below each field if validation fails.
+The form checks that name is not empty, price is greater than 0, and stock is 0 or more. Error messages appear below each field if any of these validation were to fail.
