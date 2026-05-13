@@ -1,8 +1,4 @@
-# Vue 3 + Vite
-
 Product Inventory Dashboard
-
-
 A simple single-page inventory management app built with Vue 3 and Pinia.
 Tech Stack
 
@@ -10,7 +6,6 @@ Vue 3 (Composition API)
 Pinia (state management)
 Vite (build tool)
 Plain CSS (no UI library)
-
 
 Setup & Run
 bash# Install dependencies
@@ -45,8 +40,6 @@ src/
 ├── App.vue               # Root component, loads data, renders layout
 ├── main.js               # App entry point, registers Pinia
 └── style.css             # Global styles
-
-
 Design Decisions
 Why Pinia?
 Pinia is the official state management library for Vue 3. I used it so all the product data, filters, and sorting logic live in one place rather than being scattered across components. Components stay thin — they just display data and call store actions.
