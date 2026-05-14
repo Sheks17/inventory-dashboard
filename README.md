@@ -56,13 +56,13 @@ src/
 
 ## Design Decisions
 
-**Why Pinia?**
+**Why did I choose Pinia?**
 Pinia is the official state management library for Vue 3. I used it so all the product data, filters, and sorting logic live in one place rather than being scattered across components. Components stay thin so they can mainly just display data and call store actions.
 
-**Why keep components thin?**
+**Why is it important to keep components thin?**
 Each component only does one thing. ProductTable displays products. ProductForm handles adding. Filters handles filtering. This makes the code easier to read and maintain.
 
-**Why localStorage?**
+**I decided to use localStorage because**
 A real app would use a backend API. But this project is mostly frontend, so the localStorage lets the data survive page refreshes so you don't lose products every time you reload.
 
 **Why a computed getter for filtering?**
@@ -70,3 +70,14 @@ The filteredProducts getter in the store automatically recalculates whenever the
 
 **Validation**
 The form checks that name is not empty, price is greater than 0, and stock is 0 or more. Error messages appear below each field if any of these validation were to fail.
+
+## What I Learned
+
+Coming from React and Redux, this project helped me deepen my understanding 
+of Vue's reactivity system. Computed properties were particularly interesting,                                     in React I was used to manually managing derived state with useMemo or 
+Redux selectors, but seeing how Vue's computed values automatically track 
+their dependencies and recalculate felt more intuitive. This also helped me 
+better understand v-model and how two-way binding works under the hood. 
+Overall, building this in under 24 hours with a framework I had never used 
+before was a valuable experience in learning by doing and transferring 
+concepts across frameworks.
