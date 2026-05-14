@@ -81,3 +81,23 @@ better understand v-model and how two-way binding works under the hood.
 Overall, building this in under 24 hours with a framework I had never used 
 before was a valuable experience in learning by doing and transferring 
 concepts across frameworks.
+
+## Unite Test
+
+**Test 1 — addProduct:**
+
+We create a fresh store
+We call addProduct with a product object
+We check that products now has 1 item
+We check the name is correct
+We check price converted from string "999" to number 999
+We check stock converted from string "10" to number 10
+
+
+**Test 2 — removeProduct:**
+
+We create a fresh store
+We add a product first so we have something to remove
+We grab its ID
+We call removeProduct with that ID
+We check the store is now empty
