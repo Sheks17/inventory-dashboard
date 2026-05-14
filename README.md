@@ -100,3 +100,11 @@ concepts across frameworks.
 - We grab its ID
 - We call removeProduct with that ID
 - We check the store is now empty
+
+## Unit Testing
+
+**Installation**
+- npm install -D vitest @pinia/testing @vue/test-utils
+
+**Then run**
+- npm run test
